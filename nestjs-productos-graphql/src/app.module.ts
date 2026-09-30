@@ -20,6 +20,8 @@ export const { ObserveModule, ObserveInstrument } = createObserveModule();
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
       autoSchemaFile: join(process.cwd(), 'schema.gql'),
+      playground: true,
+      introspection: true,
     }),
     HttpModule.register({}),
   ],
